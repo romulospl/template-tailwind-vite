@@ -16,30 +16,21 @@ const { increment } = mapActions(useMainStore, ["increment"])
 </script>
 
 <template>
-  <h1>{{ msg }}</h1>
+  <div class="w-full mx-auto">
 
-  <div class="card">
+    <div class="text-center">
+      <span>{{ msg }}</span>
+    </div>
 
-    <button type="button" @click="increment">count is {{ counter }}</button>
-
-    <p>
-      Edit
-      <code>components/HelloWorld.vue</code> to test HMR
-    </p>
+    <div class="w-fit mx-auto mt-8">
+      <div>
+        <span>Pinia example: </span>
+      </div>
+      <button class="border border-slate-300 px-6 py-2 rounded-3xl" type="button" @click="increment">count is {{ counter }}</button>
+    </div>
+    
   </div>
 
-  <p>
-    Check out
-    <a href="https://vuejs.org/guide/quick-start.html#local" target="_blank"
-      >create-vue</a
-    >, the official Vue + Vite starter
-  </p>
-  <p>
-    Install
-    <a href="https://github.com/johnsoncodehk/volar" target="_blank">Volar</a>
-    in your IDE for a better DX
-  </p>
-  <p class="read-the-docs">Click on the Vite and Vue logos to learn more</p>
 </template>
 
 <style scoped>
